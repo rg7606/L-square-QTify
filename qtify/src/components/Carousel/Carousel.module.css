@@ -1,0 +1,47 @@
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* left btn - swiper - right btn */
+  align-items: center;
+  gap: 8px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+}
+
+.navBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.6);
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  user-select: none;
+}
+
+.navBtn:hover {
+  transform: scale(1.05);
+}
+
+.left { justify-self: start; }
+.right { justify-self: end; }
+
+/* Swiper will add this class; we hide the button completely as per requirement */
+.navBtn.swiper-button-disabled {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
